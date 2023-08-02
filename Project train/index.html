@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>    
+<body>
+    <a-scene background="color:gray">
+
+     <a-camera wasd-controls-enabled="false" position="0 8 20"></a-camera>
+        
+     <a-assets>      
+<a-asset-item id="train-obj" src="tinker.obj"></a-asset>
+ <a-asset-item id="train-mtl" src="obj.mtl"></a-assets>
+ </a-assets> 
+ 
+ <a-entity animation = "property: position; from 80 0 0; to: -90; easing: liner; loop: true; dur: 20000;">
+    <a-entity obj-model = "obj: #train-obj; mtl: #train-mtl" position = "0 0.5 -10 " rotation = "-90 180 90" scale = "0.1 0.1 0.1"></a-entity>
+ </a-entity>
+</a-scene>
+</body>
+</html>
